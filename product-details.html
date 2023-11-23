@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./product-details.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+			rel="stylesheet" />
+		<script src="./dynamic-content.js"></script>
+	</head>
+	<body>
+		<nav>
+			<div class="left-side">
+				<ul>
+					<li>
+						<a href="homepage.html"
+							><img src="./images/apple-white.svg"
+						/></a>
+					</li>
+					<li><a href="homepage.html">Home</a></li>
+					<li><a href="product_archive.html">Products</a></li>
+					<li><a href="support.html">Support</a></li>
+				</ul>
+			</div>
+			<div class="right-side">
+				<ul>
+					<li><a href="https://www.apple.com/retail/">Find a store</a></li>
+					<li><a href="https://www.apple.com/support/products/?cid=gn-ols-home-acpp-helpful_topics">Apple Care</a></li>
+					<li><a href="https://www.apple.com/shop/trade-in">Trade-in</a></li>
+					<li>
+						<a href="#"><img src="./images/shopping-cart.svg" /></a>
+					</li>
+					<li>
+						<a href="#"><img src="./images/search.svg" /></a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<main>
+			<section class="link">
+				<img src="./images/apple-black.svg" />
+				<img src="./images/arrow-right.svg" />
+				<a href="#">Cart</a>
+			</section>
+
+			<h1>Review your order</h1>
+
+			<section class="product-details">
+				<div class="details">
+					<!-- dynamic images here -->
+					<img id="product-image" />
+
+					<div class="detail-wrapper">
+						<div class="model-details">
+							<h2 id="product-h2">Model product</h2>
+							<span id="product-price">$1000</span>
+						</div>
+
+						<div class="properties">
+							<div class="color">
+								<span class="label">Color:</span>
+								<span id="dynamic-color">Deep purple</span>
+							</div>
+							<div class="pickup">
+								<span class="label">Pick-up:</span>
+								<span>No</span>
+							</div>
+							<div class="storage">
+								<span class="label">Storage:</span>
+								<span>512GB</span>
+							</div>
+							<div class="trade">
+								<span class="label">Trade-in:</span>
+								<span>No</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="payment">
+					<h3>Payment Method</h3>
+
+					<div class="method">
+						<div class="cash">
+							<h4>Cash on Delivery</h4>
+							<span>Free</span>
+						</div>
+						<div class="paypal">
+							<h4>Paypal</h4>
+							<span>$0 transaction fee</span>
+						</div>
+						<div class="installment">
+							<h4>Pay in Installments</h4>
+							<span>0% interest rate</span>
+						</div>
+					</div>
+
+					<div class="total">
+						<div class="subtotal">
+							<span class="label">Subtotal:</span>
+							<span>$2398.00</span>
+						</div>
+
+						<div class="shipping">
+							<span class="label">Shipping:</span>
+							<span>$0.00</span>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="footer__links--container">
+				<div class="links-wrapper">
+					<div class="list">
+						<h5>Shop and Learn</h5>
+						<a href="#">Store</a>
+						<a href="#">Mac</a>
+						<a href="#">Ipad</a>
+						<a href="#">iPhone</a>
+						<a href="#">Watch</a>
+						<a href="#">Vision</a>
+						<a href="#">AirPods</a>
+						<a href="#">TV & Home</a>
+						<a href="#">AirTag</a>
+						<a href="#">Accessories</a>
+						<a href="#">Gift Cards</a>
+					</div>
+					<div class="list">
+						<h5>Apple Wallet</h5>
+						<a href="#">Wallet</a>
+						<a href="#">Apple Card</a>
+						<a href="#">Apple Pay</a>
+						<a href="#">Apple Cash</a>
+					</div>
+				</div>
+				<div class="links-wrapper">
+					<div class="list">
+						<h5>Account</h5>
+						<a href="#">Manage Your Apple ID</a>
+						<a href="#">Apple Store Account</a>
+						<a href="#">iCloud.com</a>
+					</div>
+					<div class="list">
+						<h5>Entertainment</h5>
+						<a href="#">Apple One</a>
+						<a href="#">Apple TV+</a>
+						<a href="#">Apple Music</a>
+						<a href="#">Apple Arcade</a>
+						<a href="#">Apple Fitness+</a>
+						<a href="#">Apple News+</a>
+						<a href="#">Apple Podcasts</a>
+						<a href="#">Apple Books</a>
+						<a href="#">App Store</a>
+					</div>
+				</div>
+				<div class="links-wrapper">
+					<div class="list">
+						<h5>Apple Store</h5>
+						<a href="#">Find a Store</a>
+						<a href="#">Genius Bar</a>
+						<a href="#">Today at Apple</a>
+						<a href="#">Apple Camp</a>
+						<a href="#">Apple Store App</a>
+						<a href="#">Certified Refurbished</a>
+						<a href="#">Apple Trade In</a>
+						<a href="#">Financing</a>
+						<a href="#">Carrier Deals at Apple</a>
+						<a href="#">Order Status</a>
+						<a href="#">Shopping Help</a>
+					</div>
+				</div>
+				<div class="links-wrapper">
+					<div class="list">
+						<h5>For Business</h5>
+						<a href="#">Apple and Business</a>
+						<a href="#">Shop for Business</a>
+					</div>
+					<div class="list">
+						<h5>For Education</h5>
+						<a href="#">Apple and Education</a>
+						<a href="#">Shop for K-12</a>
+						<a href="#">Shop for College</a>
+					</div>
+					<div class="list">
+						<h5>For Healthcare</h5>
+						<a href="#">Apple in Healthcare</a>
+						<a href="#">Health on Apple Watch</a>
+						<a href="#">Health Records on iPhone</a>
+					</div>
+					<div class="list">
+						<h5>For Government</h5>
+						<a href="#">Shop for Government</a>
+						<a href="#">Shop for Military</a>
+					</div>
+				</div>
+				<div class="links-wrapper">
+					<div class="list">
+						<h5>Apple Values</h5>
+						<a href="#">Accessibility</a>
+						<a href="#">Education</a>
+						<a href="#">Environment</a>
+						<a href="#">Inclusion and Diversity</a>
+						<a href="#">Privacy</a>
+						<a href="#">Racial Equity and Justice</a>
+						<a href="#">Supplier Responsibility</a>
+					</div>
+					<div class="list">
+						<h5>About Apple</h5>
+						<a href="#">Newsroom</a>
+						<a href="#">Apple Leadership</a>
+						<a href="#">Career Opportunities</a>
+						<a href="#">Investors</a>
+						<a href="#">Ethics & Compliance</a>
+						<a href="#">Events</a>
+						<a href="#">Contact Apple</a>
+					</div>
+				</div>
+			</div>
+			<div class="privacy">
+				<h5>Copyrighted Phuc.</h5>
+				<div class="privacy__list">
+					<a href="#">Privacy Policy</a>
+					<a href="#">Terms of Use</a>
+					<a href="#">Sales and Refunds</a>
+					<a href="#">Legal</a>
+					<a href="#">Site Map</a>
+				</div>
+				<h5>United States</h5>
+			</div>
+		</footer>
+	</body>
+</html>

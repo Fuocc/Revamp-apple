@@ -1,0 +1,485 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter';
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 6%;
+    background-color: #000;
+
+    & ul {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+
+        & li {
+            list-style: none;
+
+            & a {
+                text-decoration: none;
+                color: #ddd;
+                font-family: 'Inter';
+                font-weight: 400;
+                font-size: 16px;
+                transition: .25s all;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+main {
+    padding: 0 6%;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 50px;
+    border-bottom: 1px solid #E2E8F0;
+    padding-bottom: 32px;
+    width: 100%;
+    max-width: 1800px;
+    margin: 50px auto 0;
+
+    & a {
+        font-family: 'Inter';
+        font-size: 16px;
+        font-weight: 600;
+        text-decoration: none;
+        color: #000;
+    }
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+    background-color: #F5F5F7;
+    border-radius: 30px;
+    padding-left: 100px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 1800px;
+    margin: 40px auto 0;
+}
+
+.hero::after {
+    content: 'Available in 2024';
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #fff;
+    padding: 10px 35px;
+    background-color: #FFFFFF33;
+    border-radius: 30px;
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+}
+
+.hero .content {
+    display: flex;
+    flex-direction: column;
+    gap: 135px;
+}
+
+.hero .title span {
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.hero .title a {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+    width: max-content;
+    background-color: #1A202C;
+    border: 1px solid #1A202C;
+    border-radius: 45px;
+    padding: 11px 13px 11px 30px;
+    margin-top: 40px;
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    transition: .25s all;
+}
+
+.hero .title a:hover {
+    background-color: transparent;
+    border: 1px solid #1A202C;
+    color: #1A202C;
+}
+
+.hero .title a:hover img {
+    filter: brightness(.25);
+}
+
+.hero .heading {
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: min(3vw, 48px);
+    text-wrap: nowrap;
+}
+
+.hero .heading img {
+    width: 3.5vw;
+    max-width: 48px;
+}
+
+.hero .sub-title {
+    font-family: 'Inter';
+    font-size: 22px;
+    font-weight: 600;
+    color: #86868B;
+    line-height: 32px;
+    padding-top: 30px;
+    position: relative;
+}
+
+.hero .sub-title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 1.5px;
+    background-color: #CBD5E0;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    width: 100%;
+    max-width: calc(1880px - 60px);
+    margin: 32px auto 0;
+}
+
+.products .iphones,
+.ipads,
+.watches,
+.macs {
+    background-color: #F5F5F7;
+    border-radius: 30px;
+    padding: 84px 0 0 60px;
+    font-family: 'Inter';
+    overflow: hidden;
+}
+
+.products .iphones img,
+.ipads img,
+.watches img,
+.macs img {
+    transition: .25s all ease-in-out;
+}
+
+.products .iphones:hover img,
+.ipads:hover img,
+.watches:hover img,
+.macs:hover img {
+    transform: scale(1.1);
+}
+
+.products .iphones h2,
+.ipads h2,
+.watches h2,
+.macs h2 {
+    display: inline-block;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.products .iphones a,
+.ipads a,
+.watches a,
+.macs a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #2B6CB0;
+    text-decoration: none;
+    margin-top: 18px;
+    width: max-content;
+}
+
+.products .iphones img {
+    margin-top: 48px;
+}
+
+.products .ipads img {
+    margin-top: 60px;
+}
+
+.products .watches img {
+    margin-top: 55px;
+}
+
+.products .macs img {
+    margin-top: 48px;
+}
+
+.products .link-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+.test {
+    background-color: #333;
+}
+
+.support {
+    display: flex;
+    justify-content: space-between;
+    background-color: #F5F5F7;
+    border-radius: 30px;
+    padding: 85px 75px;
+    gap: 80px;
+    width: 100%;
+    max-width: 1880px;
+    margin: 32px auto 0;
+
+    & .left-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        & .title {
+            font-family: 'Inter';
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 65.6px;
+        }
+
+        & .link-wrapper {
+            display: flex;
+            flex-direction: column;
+
+            & .link {
+                font-family: 'Inter';
+                font-size: 14px;
+                font-weight: 400;
+                text-decoration: none;
+                color: #1A202C;
+            }
+
+            & .button {
+                font-size: 16px;
+                color: #fff;
+                background-color: #000000;
+                padding: 0 42px 0 12px;
+                margin-top: 26px;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                width: max-content;
+                border: 1px solid #000;
+                border-radius: 50px;
+                text-decoration: none;
+                font-family: 'Inter';
+                font-size: 14px;
+                font-weight: 400;
+                transition: .25s all;
+
+                & img {
+                    width: 60px;
+                    height: 70px;
+                }
+
+                &:hover{
+                    transform: translateY(-2px);
+                    box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.04), 0px 20px 25px -5px rgba(0, 0, 0, 0.10);
+                }
+            }
+        }
+    }
+
+    & .right-side{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: 60%;
+
+        & a{
+            display: flex;
+            justify-content: space-between;
+            padding: 28px 30px 28px 40px;
+            background-color: #fff;
+            border: 1px solid #DAE0E6;
+            border-radius: 16px;
+            font-family: 'Inter';
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            color: #000;
+            transition: .3s all;
+
+            &:hover{
+                border: 1px solid #000;
+                box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.06), 0px 4px 6px -1px rgba(0, 0, 0, 0.10);
+            }
+        }
+    }
+}
+
+.apple-one{
+    background-color: #F5F5F7;
+    border-radius: 30px;
+    padding: 120px 33px 0;
+    width: 100%;
+    max-width: 1880px;
+    margin: 32px auto 0;
+
+    & .heading{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & .tag{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 16px;
+            font-weight: 500;
+            background-color: #fff;
+            border-radius: 30px;
+            padding: 9px 19px;
+            box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+
+            & img{
+                border-right: 1px solid #DDDDDD;
+                padding-right: 20px;
+            }
+        }
+
+        & h2{
+            text-align: center;
+            font-size: min(6vw, 84px);
+            line-height: min(7vw, 92px);
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        & button{
+            font-weight: 500;
+            font-size: 19px;
+            padding: 21px 75px;
+            border-radius: 99px;
+            margin-top: 70px;
+            background-color: #000;
+            color: #fff;
+            transition: .25s all;
+
+            &:hover{
+                transform: translateY(-2px);
+                box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.04), 0px 20px 25px -5px rgba(0, 0, 0, 0.10);
+            }
+        }
+
+        & span:not(.tag__span){
+            margin-top: 24px;
+        }
+    }
+
+    & img:not(.tag__svg){
+        width: 100%;
+        margin-top: 96px;
+    }
+}
+
+footer {
+    background-color: #000;
+    padding: 120px 6% 70px;
+    margin-top: 170px;
+
+    & .footer__links--container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1440px;
+        margin: 120px auto 0;
+
+        &:not(:last-child) {
+            gap: 120px calc(100% / 12);
+        }
+    }
+
+    & .links-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+
+        & .list {
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+
+            & h5 {
+                font-size: 16px;
+                font-weight: 700;
+                color: #fff;
+            }
+
+            & a {
+                font-size: 16px;
+                font-weight: 400;
+                text-decoration: none;
+                color: #aaaaaa;
+                transition: .25s color;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    & .privacy {
+        display: flex;
+        justify-content: space-between;
+        background-color: #F5F5F729;
+        border-radius: 30px;
+        padding: 26px 45px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #fff;
+        width: 100%;
+        max-width: 1440px;
+        margin: 140px auto 0;
+
+        & a {
+            text-decoration: none;
+            color: #aaaaaa;
+            padding-right: 16px;
+            transition: .25s color;
+
+            &:not(:first-child) {
+                border-left: 1px solid #fff;
+                padding-left: 16px;
+            }
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}
