@@ -39,6 +39,10 @@ nav {
     }
 }
 
+.mobile-nav {
+    display: none;
+}
+
 main {
     padding: 0 6%;
 }
@@ -305,7 +309,7 @@ main {
                     height: 70px;
                 }
 
-                &:hover{
+                &:hover {
                     transform: translateY(-2px);
                     box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.04), 0px 20px 25px -5px rgba(0, 0, 0, 0.10);
                 }
@@ -313,13 +317,13 @@ main {
         }
     }
 
-    & .right-side{
+    & .right-side {
         display: flex;
         flex-direction: column;
         gap: 24px;
         width: 60%;
 
-        & a{
+        & a {
             display: flex;
             justify-content: space-between;
             padding: 28px 30px 28px 40px;
@@ -333,7 +337,7 @@ main {
             color: #000;
             transition: .3s all;
 
-            &:hover{
+            &:hover {
                 border: 1px solid #000;
                 box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.06), 0px 4px 6px -1px rgba(0, 0, 0, 0.10);
             }
@@ -341,7 +345,7 @@ main {
     }
 }
 
-.apple-one{
+.apple-one {
     background-color: #F5F5F7;
     border-radius: 30px;
     padding: 120px 33px 0;
@@ -349,12 +353,12 @@ main {
     max-width: 1880px;
     margin: 32px auto 0;
 
-    & .heading{
+    & .heading {
         display: flex;
         flex-direction: column;
         align-items: center;
 
-        & .tag{
+        & .tag {
             display: flex;
             align-items: center;
             gap: 20px;
@@ -365,13 +369,13 @@ main {
             padding: 9px 19px;
             box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
 
-            & img{
+            & img {
                 border-right: 1px solid #DDDDDD;
                 padding-right: 20px;
             }
         }
 
-        & h2{
+        & h2 {
             text-align: center;
             font-size: min(6vw, 84px);
             line-height: min(7vw, 92px);
@@ -379,7 +383,7 @@ main {
             margin-top: 20px;
         }
 
-        & button{
+        & button {
             font-weight: 500;
             font-size: 19px;
             padding: 21px 75px;
@@ -389,18 +393,18 @@ main {
             color: #fff;
             transition: .25s all;
 
-            &:hover{
+            &:hover {
                 transform: translateY(-2px);
                 box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.04), 0px 20px 25px -5px rgba(0, 0, 0, 0.10);
             }
         }
 
-        & span:not(.tag__span){
+        & span:not(.tag__span) {
             margin-top: 24px;
         }
     }
 
-    & img:not(.tag__svg){
+    & img:not(.tag__svg) {
         width: 100%;
         margin-top: 96px;
     }
@@ -481,5 +485,186 @@ footer {
                 color: #fff;
             }
         }
+    }
+}
+
+
+@media only screen and (max-width: 1023px) {
+
+    nav .left-side,
+    nav .right-side {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .mobile-nav .mobile__apple-icon,
+    .mobile-nav .hamburger-menu {
+        z-index: 10;
+    }
+
+    .mobile-nav__links {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background-color: #000;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        z-index: 5;
+        top: 0;
+        left: 0;
+    }
+
+    .mobile-nav ul {
+        display: flex;
+        gap: 32px;
+        flex-direction: column;
+    }
+
+    .mobile-nav__links ul li a {
+        font-size: 2rem;
+    }
+
+    .active {
+        display: flex;
+    }
+
+
+    .hero {
+        flex-direction: column;
+        background-color: transparent;
+        border-radius: 0px;
+        padding: 0px;
+        margin-top: 96px;
+    }
+
+    .hero .content {
+        padding-left: 100px;
+        gap: 64px;
+    }
+
+    .hero img {
+        border-radius: 40px;
+    }
+
+    .support {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .support .right-side {
+        width: 100%;
+    }
+
+    .footer {
+        padding: 120px 10% 70px;
+    }
+
+    .footer .privacy__list {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .hero .hero-img {
+        width: 100%;
+    }
+
+    .hero .content {
+        padding: 10%;
+    }
+
+    .hero .heading {
+        font-size: 1.5rem;
+    }
+
+    .hero .heading img {
+        width: 100%;
+        max-width: 28px;
+    }
+
+    .hero .title a{
+        gap: 32px;
+    }
+
+    .hero .sub-title {
+        font-size: 1.2rem;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .iphones,
+    .ipads,
+    .macs,
+    .watches {
+
+        & img {
+            width: 90%;
+        }
+
+        & h2 {
+            font-size: 1.5rem !important;
+        }
+    }
+
+    .support {
+        padding: 64px 10%;
+
+        & .right-side {
+
+            & span {
+                font-size: 1.1rem;
+            }
+
+            & a {
+                gap: 32px;
+            }
+        }
+    }
+
+    .support .left-side .title {
+        font-size: 1.5rem;
+        line-height: 220%;
+    }
+
+    .apple-one {
+
+        & .tag {
+
+            & img {
+                border-right: 0px !important;
+                padding-right: 0px !important;
+            }
+
+            & .tag__span {
+                display: none;
+            }
+        }
+
+        & .heading {
+            
+            & h2 {
+                font-size: 1.8rem;
+                line-height: 140%;
+            }
+
+            & button{
+                font-size: 1rem;
+                padding: 16px 48px;
+            }
+        }
+    }
+
+    .footer{
+        padding: 32px 10% 64px;
     }
 }

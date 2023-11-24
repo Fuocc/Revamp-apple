@@ -15,15 +15,15 @@ nav {
     padding: 22px 6%;
     background-color: #000;
 
-    & ul{
+    & ul {
         display: flex;
         align-items: center;
         gap: 32px;
 
-        & li{
+        & li {
             list-style: none;
 
-            & a{
+            & a {
                 text-decoration: none;
                 color: #ddd;
                 font-family: 'Inter';
@@ -31,7 +31,7 @@ nav {
                 font-size: 16px;
                 transition: .25s all;
 
-                &:hover{
+                &:hover {
                     color: #fff;
                 }
             }
@@ -88,7 +88,7 @@ h2 {
     gap: 32px;
     margin-top: 50px;
 
-    & a{
+    & a {
         text-decoration: none;
     }
 
@@ -189,6 +189,104 @@ footer {
             &:hover {
                 color: #fff;
             }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1023px) {
+
+    nav .left-side,
+    nav .right-side {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .mobile-nav .mobile__apple-icon,
+    .mobile-nav .hamburger-menu {
+        z-index: 10;
+    }
+
+    .mobile-nav__links {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background-color: #000;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        z-index: 5;
+        top: 0;
+        left: 0;
+    }
+
+    .mobile-nav ul {
+        display: flex;
+        gap: 32px;
+        flex-direction: column;
+    }
+
+    .mobile-nav__links ul li a {
+        font-size: 2rem;
+    }
+
+    .active {
+        display: flex;
+    }
+
+    .footer {
+        padding: 32px 10% 64px;
+    }
+
+    .footer .privacy__list {
+        display: none;
+    }
+
+    .link {
+        margin-top: 64px;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .products-wrapper .list-products {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    main{
+        padding: 0 10%;
+    }
+
+    .link {
+        margin-top: 48px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .products-wrapper .list-products{
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        & img{
+            width: 100%;
+        }
+
+        & h4{
+            font-size: 1.2rem;
         }
     }
 }

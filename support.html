@@ -13,6 +13,7 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
 			rel="stylesheet" />
+		<script src="./scripts.js"></script>
 	</head>
 	<body>
 		<nav>
@@ -40,6 +41,23 @@
 						<a href="#"><img src="./images/search.svg" /></a>
 					</li>
 				</ul>
+			</div>
+
+			<!-- Mobile Navigation -->
+			<div class="mobile-nav">
+				<a href="homepage.html" class="mobile__apple-icon"
+							><img src="./images/apple-white.svg"
+						/></a>
+				<a href="#" id="js-hamburger-trigger" class="hamburger-menu">
+					<img src="./images/mobile-menu.svg" id="js-menu-icon">
+				</a>
+				<div class="mobile-nav__links" id="mobile-nav__links">
+					<ul>
+						<li><a href="homepage.html">Home</a></li>
+						<li><a href="product_archive.html">Products</a></li>
+						<li><a href="support.html">Support</a></li>
+					</ul>
+				</div>
 			</div>
 		</nav>
 
@@ -226,7 +244,7 @@
 				</div>
 			</div>
 			<div class="privacy">
-				<h5>Copyrighted Phuc.</h5>
+				<h5>Copyrighted Phuoc.</h5>
 				<div class="privacy__list">
 					<a href="#">Privacy Policy</a>
 					<a href="#">Terms of Use</a>
