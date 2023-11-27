@@ -39,6 +39,10 @@ nav {
     }
 }
 
+.mobile-nav {
+    display: none;
+}
+
 main {
     padding: 0 6%;
 }
@@ -290,6 +294,10 @@ footer {
 
 @media only screen and (max-width: 1023px) {
 
+    h1 {
+        font-size: 3rem;
+    }
+
     nav .left-side,
     nav .right-side {
         display: none;
@@ -334,11 +342,71 @@ footer {
         display: flex;
     }
 
+    .support {
+        display: flex;
+        flex-direction: column;
+
+        & .left-side .title h2{
+            font-size: 2.5rem;
+            line-height: 140%;
+        }
+    }
+
+    .support .right-side {
+        width: 100%;
+    }
+
+    .apple-care,
+    .contact{
+        padding: 85px 36px;
+
+        & h2{
+            font-size: 2.2rem;
+        }
+
+        & .link-wrapper{
+            display: flex;
+            flex-direction: column;
+
+            & a{
+                border-radius: 15px;
+            }
+        }
+    }
+
     .footer {
         padding: 120px 10% 70px;
     }
 
     .footer .privacy__list {
         display: none;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    .support {
+        padding: 64px 10%;
+
+        & .right-side {
+
+            & span {
+                font-size: 1.1rem;
+            }
+
+            & a {
+                gap: 32px;
+            }
+        }
+    }
+
+    .support .left-side .title {
+        font-size: 1.5rem;
+        line-height: 220%;
     }
 }
